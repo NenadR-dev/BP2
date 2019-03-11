@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="C3F73406-F8E8-8505-DBA7-707CE5769CF1" name="User">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<generatorID>B039C737-4402-4CA2-CFDE-DE912D0B3A85</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Username" id="B3D2B02B-C77C-082A-6AFC-01F7CA571C14">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<generatorID>BBB22260-F6BA-3769-78F8-58657988765A</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Password" id="FD7EAF4D-5F8D-7FF4-0DC0-2FEF7D1AFADD">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<generatorID>B0226D89-726C-8816-B87B-F7114E3B3B9B</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="User_ID" id="036FD2E1-3BD3-D722-EE99-4783790D6DDC">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7E828801-FEDB-49F5-610E-B545708D8AB3" name="User_PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="036FD2E1-3BD3-D722-EE99-4783790D6DDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

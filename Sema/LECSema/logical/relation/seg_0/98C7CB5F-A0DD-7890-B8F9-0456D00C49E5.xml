@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="FeaturesInMedia" directorySegmentName="seg_0" id="98C7CB5F-A0DD-7890-B8F9-0456D00C49E5">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 11:12:01 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="6A7B14A9-679A-EDF5-477E-B9DEF23F3308" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>2BC0DD19-721D-C970-452B-15BA52CC502D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AD63DFA9-6EAB-1ACD-299A-8BA1415C6370</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

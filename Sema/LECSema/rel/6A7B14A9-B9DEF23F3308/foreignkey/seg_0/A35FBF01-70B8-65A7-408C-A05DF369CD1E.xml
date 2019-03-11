@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A35FBF01-70B8-65A7-408C-A05DF369CD1E" containerWithKeyObject="E52DA83E-9A29-F46C-C787-58262CDE02FD" localFKIndex="9C41437F-D094-B565-2FE3-7298256BBDFB" name="IsOn_Media_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:37:48 UTC</createdTime>
+<generatorID>B83D4BEE-A363-6940-0F0D-89B59EE9634E</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<referredTableLongName>Media</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C0F48F44-ADD4-6ADD-180B-DA7B16EE8AEA</referredTableID>
+<keyObject>76DD6978-FA8C-58DA-9365-FCD8C1D1A9A9</keyObject>
+<referredKeyID>76DD6978-FA8C-58DA-9365-FCD8C1D1A9A9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Media_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

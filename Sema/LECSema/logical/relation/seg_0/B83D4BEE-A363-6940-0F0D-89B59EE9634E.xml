@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="IsOn" directorySegmentName="seg_0" id="B83D4BEE-A363-6940-0F0D-89B59EE9634E">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 11:12:27 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="6A7B14A9-679A-EDF5-477E-B9DEF23F3308" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>3C99EF33-5FA4-4F9B-2CFF-EFBE39AC639E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AD63DFA9-6EAB-1ACD-299A-8BA1415C6370</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

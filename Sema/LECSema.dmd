@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="LECSema" id="6DDE0FAC-6790-7DB2-3E56-462DEA2DB997" version="3.5">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 10:11:10 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6DDE0FAC-6790-7DB2-3E56-462DEA2DB997</designId>
+</OSDM_Design>
