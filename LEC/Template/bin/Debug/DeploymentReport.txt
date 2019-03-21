@@ -1,0 +1,49 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[AnalyticalCaster] (Table)
+       [dbo].[Caster] (Table)
+       [dbo].[Employee] (Table)
+       [dbo].[FeaturesInMedia] (Table)
+       [dbo].[Host] (Table)
+       [dbo].[IsOnMedia] (Table)
+       [dbo].[Match] (Table)
+       [dbo].[MatchTicket] (Table)
+       [dbo].[Media] (Table)
+       [dbo].[Schedule] (Table)
+       [dbo].[ScheduledMatch] (Table)
+       [dbo].[Standing] (Table)
+       [dbo].[Team] (Table)
+       [dbo].[TeamStaff] (Table)
+       [dbo].[Ticket] (Table)
+       [dbo].[User] (Table)
+       [dbo].[WorksForTeam] (Table)
+       [dbo].[AnalyticalCaster_FK] (Foreign Key)
+       [dbo].[Caster_FK] (Foreign Key)
+       [dbo].[FeaturesInMedia_FK] (Foreign Key)
+       [dbo].[FeaturesInMedia_FK2] (Foreign Key)
+       [dbo].[Host_FK] (Foreign Key)
+       [dbo].[IsOnMedia_FK] (Foreign Key)
+       [dbo].[IsOnMedia_FK2] (Foreign Key)
+       [dbo].[Match_FK] (Foreign Key)
+       [dbo].[Match_FK2] (Foreign Key)
+       [dbo].[Match_FK3] (Foreign Key)
+       [dbo].[MatchTicket_FK] (Foreign Key)
+       [dbo].[MatchTicket_FK2] (Foreign Key)
+       [dbo].[MatchTicket_FK3] (Foreign Key)
+       [dbo].[ScheduledMatch_FK] (Foreign Key)
+       [dbo].[ScheduledMatch_FK2] (Foreign Key)
+       [dbo].[Standing_FK] (Foreign Key)
+       [dbo].[WorksForTeam_FK] (Foreign Key)
+       [dbo].[WorksForTeam_FK2] (Foreign Key)
+
+** Supporting actions

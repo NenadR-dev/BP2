@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="68CEA450-532B-AA01-9CF5-7A6C5B87E188" containerWithKeyObject="8D753E21-62D3-075B-4BE6-93E09250B78A" localFKIndex="BE25D480-DB0F-C4C6-64F6-145A663FE397" name="MatchTicket_Match_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>3CAE9183-0CF5-61ED-908B-24C3C198FBCD</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<referredTableLongName>Match</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D7613567-783B-0E41-F524-CE022C726957</referredTableID>
+<keyObject>86B71159-ADAB-67E6-5C84-6BDBC2516F1F</keyObject>
+<referredKeyID>86B71159-ADAB-67E6-5C84-6BDBC2516F1F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>MatchID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

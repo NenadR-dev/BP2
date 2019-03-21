@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[IsOnMedia]
+	ADD CONSTRAINT [IsOnMedia_PK]
+	PRIMARY KEY (MediaID,ACasterID)

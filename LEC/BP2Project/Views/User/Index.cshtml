@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            padding-top: 0px;
+            background: url(https://cdn.estnn.com/wp-content/uploads/2019/01/22033208/europion-champion3.jpg)
+        }
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default" style="background-color:royalblue;opacity:0.3; color:white">
+    </nav>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index","User")"><img style="width:40px;height:40px; margin-top:-12px;" src="https://eu.lolesports.com/darkroom/original/b496f5eaa42b6152b579a5c3e6edf5a3:b9ea0fa9ce55cde10d1eef7564ba4c3a/en-logo.png" /></a>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="@Url.Action("Schedule", "User")">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        Schedule
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Standings", "User")">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Standings
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Media", "User")">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Media
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Tickets", "User")">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Tickets
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("UserProfile", "User")">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Logout", "User")">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="color:white">LEC</h1>
+        <p style="color:white; font-size:18px;">
+            The LCS is the preeminent League of Legends esports league in Europe.<br /> It is comprised of 10 teams who will face off against every other team.
+        </p>
+    </div>
+
+</body>
+</html>

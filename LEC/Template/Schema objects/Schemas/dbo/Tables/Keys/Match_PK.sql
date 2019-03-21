@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Match]
+	ADD CONSTRAINT [Match_PK]
+	PRIMARY KEY (MatchID)

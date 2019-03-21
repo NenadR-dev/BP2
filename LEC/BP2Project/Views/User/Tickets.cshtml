@@ -1,0 +1,105 @@
+﻿@model BP2Project.ViewModel.TicketViewModel
+<head>
+    <style>
+        body {
+            background: url(https://static1.squarespace.com/static/5a82f1550abd04d826494bc8/t/5c643f3beb393118997dec73/1550073661422/background-lol.png?format=2500w);
+            background-repeat: repeat;
+            background-size: 1620px, 720px;
+        }
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            background: rgba(0,0,0,0.3);
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 13px;
+            color: #fff;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+            border: 1px solid rgba(0,0,0,0.3);
+            border-radius: 4px;
+            box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+            -webkit-transition: box-shadow .5s ease;
+            -moz-transition: box-shadow .5s ease;
+            -o-transition: box-shadow .5s ease;
+            transition: box-shadow .5s ease;
+        }
+
+            input:focus {
+                box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
+            }
+        .ticketinfo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -150px 0 0 -150px;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index","User")"><img style="width:40px;height:40px; margin-top:-12px;" src="https://eu.lolesports.com/darkroom/original/b496f5eaa42b6152b579a5c3e6edf5a3:b9ea0fa9ce55cde10d1eef7564ba4c3a/en-logo.png" /></a>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="@Url.Action("Schedule", "User")">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        Schedule
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Standings", "User")">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Standings
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Media", "User")">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Media
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Tickets", "User")">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Tickets
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("UserProfile", "User")">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Logout", "User")">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="ticketinfo" style="margin-top:-200px; color:white;">
+        <form method="post">
+            <h2>Select Match</h2>
+            @Html.DropDownList("match",
+                        new SelectList(Model.matches),
+                        "Select Match",
+                        new { @class = "form-control" })
+            <input type="number" name="row" placeholder="Row" required="required" />
+            <input type="number" name="seat" placeholder="Seat" required="required" />
+            <div class="col-md-10">
+                <label>Price:</label>
+                <input type="number" name="Price" placeholder="Price" value="45" readonly="readonly" style="width:150px;" />
+                <label>@Model.errorMSG</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Purchase</button>
+        </form>
+    </div>
+</body>

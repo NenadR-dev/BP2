@@ -1,0 +1,35 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6388F4DF-13D5-34BC-C6FB-D57BFEB3CB06" name="Caster">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 10:17:08 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="6A7B14A9-679A-EDF5-477E-B9DEF23F3308" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>788B9278-CB2E-7B04-930C-FE469F95143E</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributeInherType>All atributes</attributeInherType>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CastingStyle" id="5C73C3B0-C993-6438-DDC9-CBD3547F33E7">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-15 10:12:58 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="6A7B14A9-679A-EDF5-477E-B9DEF23F3308" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

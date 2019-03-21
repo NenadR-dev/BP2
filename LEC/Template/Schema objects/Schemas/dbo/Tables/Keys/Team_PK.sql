@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Team]
+	ADD CONSTRAINT [Team_PK]
+	PRIMARY KEY (TeamID)

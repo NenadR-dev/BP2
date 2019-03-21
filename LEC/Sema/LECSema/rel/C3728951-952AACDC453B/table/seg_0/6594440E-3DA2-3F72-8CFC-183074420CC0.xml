@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6594440E-3DA2-3F72-8CFC-183074420CC0" name="WorksForTeam">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>2BC0DD19-721D-C970-452B-15BA52CC502D</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Team_TeamID" id="3ACBE2C4-4A24-4537-B2F3-23F03B72AB65">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>3BBFA539-E81E-67F3-0AA8-45C9E3916C0B</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B09F0295-4AC0-333B-F6B4-7E10B254D75F" referredColumn="0D828767-BBB0-13DF-75F7-44F19F8BC828"/>
+</associations>
+</Column>
+<Column name="TeamStaff_TeamStaffID" id="C1E30ABE-F359-4856-5918-6B688C1EE3A4">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>007A5C54-093B-B29C-6CC7-DF9BA29CB5EB</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E67769F0-6265-F1C4-95CA-30BA7FFB12FB" referredColumn="4CF930BF-DCFF-C5F8-B546-7351745DF9BB"/>
+</associations>
+</Column>
+<Column name="WorksForTeam_ID" id="D25A2BAD-A11B-FB75-34FE-7E25997D9037">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="75572041-8626-629D-30C3-EF1543881DA9" name="WorksForTeam_PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="D25A2BAD-A11B-FB75-34FE-7E25997D9037"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="838945F6-B8A7-35EE-5A06-E64B12CE5099" name="WorksForTeam_Team_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>90A0BB57-D48A-EAB2-528E-CBD29DB6E7C4</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3ACBE2C4-4A24-4537-B2F3-23F03B72AB65"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="09B4D42F-5641-9314-3EAD-DCC30CD71181" name="WorksForTeam_TeamStaff_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>2117A4E5-9DCB-DD01-1192-10A0D5778DA7</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1E30ABE-F359-4856-5918-6B688C1EE3A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

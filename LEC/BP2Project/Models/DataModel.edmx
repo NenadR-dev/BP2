@@ -1,0 +1,1114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LECDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnalyticalCaster">
+          <Key>
+            <PropertyRef Name="ACasterID" />
+          </Key>
+          <Property Name="ACasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PredictionRate" Type="float" Nullable="false" />
+          <Property Name="Expertise" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Caster">
+          <Key>
+            <PropertyRef Name="CasterID" />
+          </Key>
+          <Property Name="CasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CastingStyle" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="InGameName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="BirthDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FeaturesInMedia">
+          <Key>
+            <PropertyRef Name="WorksForTeamID" />
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="WorksForTeamID" Type="int" Nullable="false" />
+          <Property Name="MediaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Host">
+          <Key>
+            <PropertyRef Name="HostID" />
+          </Key>
+          <Property Name="HostID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="IsOnMedia">
+          <Key>
+            <PropertyRef Name="ACasterID" />
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="ACasterID" Type="int" Nullable="false" />
+          <Property Name="MediaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Match">
+          <Key>
+            <PropertyRef Name="MatchID" />
+          </Key>
+          <Property Name="MatchID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MatchName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="StartTime" Type="datetime" Nullable="false" />
+          <Property Name="MatchFavorite" Type="varchar" MaxLength="20" />
+          <Property Name="TeamA_ID" Type="int" Nullable="false" />
+          <Property Name="TeamB_ID" Type="int" Nullable="false" />
+          <Property Name="Caster_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MatchTicket">
+          <Key>
+            <PropertyRef Name="MatchTicketID" />
+          </Key>
+          <Property Name="MatchID" Type="int" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="TicketID" Type="int" Nullable="false" />
+          <Property Name="MatchTicketID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Media">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Length" Type="time" Precision="7" Nullable="false" />
+          <Property Name="ReleaseDate" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+          </Key>
+          <Property Name="ScheduleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MatchOfTheDay" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MatchDescription" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ScheduledMatch">
+          <Key>
+            <PropertyRef Name="MatchID" />
+            <PropertyRef Name="ScheduleID" />
+          </Key>
+          <Property Name="MatchID" Type="int" Nullable="false" />
+          <Property Name="ScheduleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Standing">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Wins" Type="int" Nullable="false" />
+          <Property Name="Loses" Type="int" Nullable="false" />
+          <Property Name="Rank" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeamName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="HeadQuarters" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TeamStaff">
+          <Key>
+            <PropertyRef Name="TeamStaffID" />
+          </Key>
+          <Property Name="TeamStaffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="InGameName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Salary" Type="int" Nullable="false" />
+          <Property Name="Country" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Position" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Row" Type="int" Nullable="false" />
+          <Property Name="Seat" Type="int" Nullable="false" />
+          <Property Name="Price" Type="float" Nullable="false" />
+          <Property Name="Location" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="MatchName" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WorksForTeam">
+          <Key>
+            <PropertyRef Name="WorksForTeamID" />
+          </Key>
+          <Property Name="WorksForTeamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeamStaffID" Type="int" Nullable="false" />
+          <Property Name="TeamID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="AnalyticalCaster_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="AnalyticalCaster" Type="Self.AnalyticalCaster" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="AnalyticalCaster">
+              <PropertyRef Name="ACasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Caster_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Caster" Type="Self.Caster" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Caster">
+              <PropertyRef Name="CasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FeaturesInMedia_FK">
+          <End Role="Media" Type="Self.Media" Multiplicity="1" />
+          <End Role="FeaturesInMedia" Type="Self.FeaturesInMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Media">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="FeaturesInMedia">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FeaturesInMedia_FK2">
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="1" />
+          <End Role="FeaturesInMedia" Type="Self.FeaturesInMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WorksForTeam">
+              <PropertyRef Name="WorksForTeamID" />
+            </Principal>
+            <Dependent Role="FeaturesInMedia">
+              <PropertyRef Name="WorksForTeamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Host_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Host" Type="Self.Host" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Host">
+              <PropertyRef Name="HostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IsOnMedia_FK">
+          <End Role="Media" Type="Self.Media" Multiplicity="1" />
+          <End Role="IsOnMedia" Type="Self.IsOnMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Media">
+              <PropertyRef Name="MediaID" />
+            </Principal>
+            <Dependent Role="IsOnMedia">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="IsOnMedia_FK2">
+          <End Role="AnalyticalCaster" Type="Self.AnalyticalCaster" Multiplicity="1" />
+          <End Role="IsOnMedia" Type="Self.IsOnMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AnalyticalCaster">
+              <PropertyRef Name="ACasterID" />
+            </Principal>
+            <Dependent Role="IsOnMedia">
+              <PropertyRef Name="ACasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="TeamA_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK2">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="TeamB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK3">
+          <End Role="Caster" Type="Self.Caster" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caster">
+              <PropertyRef Name="CasterID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="Caster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK">
+          <End Role="Match" Type="Self.Match" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match">
+              <PropertyRef Name="MatchID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="MatchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK2">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK3">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="TicketID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ScheduledMatch_FK">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="1" />
+          <End Role="ScheduledMatch" Type="Self.ScheduledMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Schedule">
+              <PropertyRef Name="ScheduleID" />
+            </Principal>
+            <Dependent Role="ScheduledMatch">
+              <PropertyRef Name="ScheduleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ScheduledMatch_FK2">
+          <End Role="Match" Type="Self.Match" Multiplicity="1" />
+          <End Role="ScheduledMatch" Type="Self.ScheduledMatch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match">
+              <PropertyRef Name="MatchID" />
+            </Principal>
+            <Dependent Role="ScheduledMatch">
+              <PropertyRef Name="MatchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Standing_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Standing" Type="Self.Standing" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Standing">
+              <PropertyRef Name="TeamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorksForTeam_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="WorksForTeam">
+              <PropertyRef Name="TeamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorksForTeam_FK2">
+          <End Role="TeamStaff" Type="Self.TeamStaff" Multiplicity="1" />
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeamStaff">
+              <PropertyRef Name="TeamStaffID" />
+            </Principal>
+            <Dependent Role="WorksForTeam">
+              <PropertyRef Name="TeamStaffID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="FreeSeatFunction" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+          <Parameter Name="row" Type="int" Mode="In" />
+          <Parameter Name="seat" Type="int" Mode="In" />
+          <Parameter Name="matchName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="FreeSeatProcedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="row" Type="int" Mode="In" />
+          <Parameter Name="seat" Type="int" Mode="In" />
+          <Parameter Name="matchName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UpdateStandings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="teamID" Type="int" Mode="In" />
+          <Parameter Name="wins" Type="int" Mode="In" />
+          <Parameter Name="loses" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="LECDBModelStoreContainer">
+          <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AnalyticalCaster" EntityType="Self.AnalyticalCaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Caster" EntityType="Self.Caster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FeaturesInMedia" EntityType="Self.FeaturesInMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Host" EntityType="Self.Host" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IsOnMedia" EntityType="Self.IsOnMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Match" EntityType="Self.Match" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MatchTicket" EntityType="Self.MatchTicket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Media" EntityType="Self.Media" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Schedule" EntityType="Self.Schedule" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScheduledMatch" EntityType="Self.ScheduledMatch" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Standing" EntityType="Self.Standing" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Team" EntityType="Self.Team" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeamStaff" EntityType="Self.TeamStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ticket" EntityType="Self.Ticket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WorksForTeam" EntityType="Self.WorksForTeam" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="AnalyticalCaster_FK" Association="Self.AnalyticalCaster_FK">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="AnalyticalCaster" EntitySet="AnalyticalCaster" />
+          </AssociationSet>
+          <AssociationSet Name="Caster_FK" Association="Self.Caster_FK">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Caster" EntitySet="Caster" />
+          </AssociationSet>
+          <AssociationSet Name="FeaturesInMedia_FK" Association="Self.FeaturesInMedia_FK">
+            <End Role="Media" EntitySet="Media" />
+            <End Role="FeaturesInMedia" EntitySet="FeaturesInMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FeaturesInMedia_FK2" Association="Self.FeaturesInMedia_FK2">
+            <End Role="WorksForTeam" EntitySet="WorksForTeam" />
+            <End Role="FeaturesInMedia" EntitySet="FeaturesInMedia" />
+          </AssociationSet>
+          <AssociationSet Name="Host_FK" Association="Self.Host_FK">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="Host" EntitySet="Host" />
+          </AssociationSet>
+          <AssociationSet Name="IsOnMedia_FK" Association="Self.IsOnMedia_FK">
+            <End Role="Media" EntitySet="Media" />
+            <End Role="IsOnMedia" EntitySet="IsOnMedia" />
+          </AssociationSet>
+          <AssociationSet Name="IsOnMedia_FK2" Association="Self.IsOnMedia_FK2">
+            <End Role="AnalyticalCaster" EntitySet="AnalyticalCaster" />
+            <End Role="IsOnMedia" EntitySet="IsOnMedia" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK" Association="Self.Match_FK">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Match" EntitySet="Match" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK2" Association="Self.Match_FK2">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Match" EntitySet="Match" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK3" Association="Self.Match_FK3">
+            <End Role="Caster" EntitySet="Caster" />
+            <End Role="Match" EntitySet="Match" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK" Association="Self.MatchTicket_FK">
+            <End Role="Match" EntitySet="Match" />
+            <End Role="MatchTicket" EntitySet="MatchTicket" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK2" Association="Self.MatchTicket_FK2">
+            <End Role="User" EntitySet="User" />
+            <End Role="MatchTicket" EntitySet="MatchTicket" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK3" Association="Self.MatchTicket_FK3">
+            <End Role="Ticket" EntitySet="Ticket" />
+            <End Role="MatchTicket" EntitySet="MatchTicket" />
+          </AssociationSet>
+          <AssociationSet Name="ScheduledMatch_FK" Association="Self.ScheduledMatch_FK">
+            <End Role="Schedule" EntitySet="Schedule" />
+            <End Role="ScheduledMatch" EntitySet="ScheduledMatch" />
+          </AssociationSet>
+          <AssociationSet Name="ScheduledMatch_FK2" Association="Self.ScheduledMatch_FK2">
+            <End Role="Match" EntitySet="Match" />
+            <End Role="ScheduledMatch" EntitySet="ScheduledMatch" />
+          </AssociationSet>
+          <AssociationSet Name="Standing_FK" Association="Self.Standing_FK">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="Standing" EntitySet="Standing" />
+          </AssociationSet>
+          <AssociationSet Name="WorksForTeam_FK" Association="Self.WorksForTeam_FK">
+            <End Role="Team" EntitySet="Team" />
+            <End Role="WorksForTeam" EntitySet="WorksForTeam" />
+          </AssociationSet>
+          <AssociationSet Name="WorksForTeam_FK2" Association="Self.WorksForTeam_FK2">
+            <End Role="TeamStaff" EntitySet="TeamStaff" />
+            <End Role="WorksForTeam" EntitySet="WorksForTeam" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LECDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__RefactorLog">
+          <Key>
+            <PropertyRef Name="OperationKey" />
+          </Key>
+          <Property Name="OperationKey" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AnalyticalCaster">
+          <Key>
+            <PropertyRef Name="ACasterID" />
+          </Key>
+          <Property Name="ACasterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PredictionRate" Type="Double" Nullable="false" />
+          <Property Name="Expertise" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Employee" Relationship="Self.AnalyticalCaster_FK" FromRole="AnalyticalCaster" ToRole="Employee" />
+          <NavigationProperty Name="Media" Relationship="Self.IsOnMedia" FromRole="AnalyticalCaster" ToRole="Media" />
+        </EntityType>
+        <EntityType Name="Caster">
+          <Key>
+            <PropertyRef Name="CasterID" />
+          </Key>
+          <Property Name="CasterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CastingStyle" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.Caster_FK" FromRole="Caster" ToRole="Employee" />
+          <NavigationProperty Name="Matches" Relationship="Self.Match_FK3" FromRole="Caster" ToRole="Match" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InGameName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="AnalyticalCaster" Relationship="Self.AnalyticalCaster_FK" FromRole="Employee" ToRole="AnalyticalCaster" />
+          <NavigationProperty Name="Caster" Relationship="Self.Caster_FK" FromRole="Employee" ToRole="Caster" />
+          <NavigationProperty Name="Host" Relationship="Self.Host_FK" FromRole="Employee" ToRole="Host" />
+        </EntityType>
+        <EntityType Name="Host">
+          <Key>
+            <PropertyRef Name="HostID" />
+          </Key>
+          <Property Name="HostID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Employee" Relationship="Self.Host_FK" FromRole="Host" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Match">
+          <Key>
+            <PropertyRef Name="MatchID" />
+          </Key>
+          <Property Name="MatchID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MatchName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StartTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="MatchFavorite" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="TeamA_ID" Type="Int32" Nullable="false" />
+          <Property Name="TeamB_ID" Type="Int32" Nullable="false" />
+          <Property Name="Caster_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Caster" Relationship="Self.Match_FK3" FromRole="Match" ToRole="Caster" />
+          <NavigationProperty Name="Team" Relationship="Self.Match_FK" FromRole="Match" ToRole="Team" />
+          <NavigationProperty Name="Team1" Relationship="Self.Match_FK2" FromRole="Match" ToRole="Team" />
+          <NavigationProperty Name="MatchTickets" Relationship="Self.MatchTicket_FK" FromRole="Match" ToRole="MatchTicket" />
+          <NavigationProperty Name="Schedules" Relationship="Self.ScheduledMatch" FromRole="Match" ToRole="Schedule" />
+        </EntityType>
+        <EntityType Name="MatchTicket">
+          <Key>
+            <PropertyRef Name="MatchTicketID" />
+          </Key>
+          <Property Name="MatchID" Type="Int32" Nullable="false" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="TicketID" Type="Int32" Nullable="false" />
+          <Property Name="MatchTicketID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Match" Relationship="Self.MatchTicket_FK" FromRole="MatchTicket" ToRole="Match" />
+          <NavigationProperty Name="User" Relationship="Self.MatchTicket_FK2" FromRole="MatchTicket" ToRole="User" />
+          <NavigationProperty Name="Ticket" Relationship="Self.MatchTicket_FK3" FromRole="MatchTicket" ToRole="Ticket" />
+        </EntityType>
+        <EntityType Name="Medium">
+          <Key>
+            <PropertyRef Name="MediaID" />
+          </Key>
+          <Property Name="MediaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Length" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="ReleaseDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="WorksForTeams" Relationship="Self.FeaturesInMedia" FromRole="Media" ToRole="WorksForTeam" />
+          <NavigationProperty Name="AnalyticalCasters" Relationship="Self.IsOnMedia" FromRole="Media" ToRole="AnalyticalCaster" />
+        </EntityType>
+        <EntityType Name="Schedule">
+          <Key>
+            <PropertyRef Name="ScheduleID" />
+          </Key>
+          <Property Name="ScheduleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatchOfTheDay" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatchDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Matches" Relationship="Self.ScheduledMatch" FromRole="Schedule" ToRole="Match" />
+        </EntityType>
+        <EntityType Name="Standing">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Wins" Type="Int32" Nullable="false" />
+          <Property Name="Loses" Type="Int32" Nullable="false" />
+          <Property Name="Rank" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="Self.Standing_FK" FromRole="Standing" ToRole="Team" />
+        </EntityType>
+        <EntityType Name="Team">
+          <Key>
+            <PropertyRef Name="TeamID" />
+          </Key>
+          <Property Name="TeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeamName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HeadQuarters" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Matches" Relationship="Self.Match_FK" FromRole="Team" ToRole="Match" />
+          <NavigationProperty Name="Matches1" Relationship="Self.Match_FK2" FromRole="Team" ToRole="Match" />
+          <NavigationProperty Name="Standing" Relationship="Self.Standing_FK" FromRole="Team" ToRole="Standing" />
+          <NavigationProperty Name="WorksForTeams" Relationship="Self.WorksForTeam_FK" FromRole="Team" ToRole="WorksForTeam" />
+        </EntityType>
+        <EntityType Name="TeamStaff">
+          <Key>
+            <PropertyRef Name="TeamStaffID" />
+          </Key>
+          <Property Name="TeamStaffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="InGameName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salary" Type="Int32" Nullable="false" />
+          <Property Name="Country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="WorksForTeams" Relationship="Self.WorksForTeam_FK2" FromRole="TeamStaff" ToRole="WorksForTeam" />
+        </EntityType>
+        <EntityType Name="Ticket">
+          <Key>
+            <PropertyRef Name="TicketID" />
+          </Key>
+          <Property Name="TicketID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Row" Type="Int32" Nullable="false" />
+          <Property Name="Seat" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Double" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatchName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MatchTickets" Relationship="Self.MatchTicket_FK3" FromRole="Ticket" ToRole="MatchTicket" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="MatchTickets" Relationship="Self.MatchTicket_FK2" FromRole="User" ToRole="MatchTicket" />
+        </EntityType>
+        <EntityType Name="WorksForTeam">
+          <Key>
+            <PropertyRef Name="WorksForTeamID" />
+          </Key>
+          <Property Name="WorksForTeamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeamStaffID" Type="Int32" Nullable="false" />
+          <Property Name="TeamID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Team" Relationship="Self.WorksForTeam_FK" FromRole="WorksForTeam" ToRole="Team" />
+          <NavigationProperty Name="TeamStaff" Relationship="Self.WorksForTeam_FK2" FromRole="WorksForTeam" ToRole="TeamStaff" />
+          <NavigationProperty Name="Media" Relationship="Self.FeaturesInMedia" FromRole="WorksForTeam" ToRole="Media" />
+        </EntityType>
+        <Association Name="AnalyticalCaster_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="AnalyticalCaster" Type="Self.AnalyticalCaster" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="AnalyticalCaster">
+              <PropertyRef Name="ACasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Caster_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Caster" Type="Self.Caster" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Caster">
+              <PropertyRef Name="CasterID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK3">
+          <End Role="Caster" Type="Self.Caster" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caster">
+              <PropertyRef Name="CasterID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="Caster_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Host_FK">
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Host" Type="Self.Host" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmployeeID" />
+            </Principal>
+            <Dependent Role="Host">
+              <PropertyRef Name="HostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="TeamA_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Match_FK2">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Match">
+              <PropertyRef Name="TeamB_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK">
+          <End Role="Match" Type="Self.Match" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Match">
+              <PropertyRef Name="MatchID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="MatchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK2">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MatchTicket_FK3">
+          <End Role="Ticket" Type="Self.Ticket" Multiplicity="1" />
+          <End Role="MatchTicket" Type="Self.MatchTicket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ticket">
+              <PropertyRef Name="TicketID" />
+            </Principal>
+            <Dependent Role="MatchTicket">
+              <PropertyRef Name="TicketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Standing_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="Standing" Type="Self.Standing" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="Standing">
+              <PropertyRef Name="TeamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorksForTeam_FK">
+          <End Role="Team" Type="Self.Team" Multiplicity="1" />
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Team">
+              <PropertyRef Name="TeamID" />
+            </Principal>
+            <Dependent Role="WorksForTeam">
+              <PropertyRef Name="TeamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="WorksForTeam_FK2">
+          <End Role="TeamStaff" Type="Self.TeamStaff" Multiplicity="1" />
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TeamStaff">
+              <PropertyRef Name="TeamStaffID" />
+            </Principal>
+            <Dependent Role="WorksForTeam">
+              <PropertyRef Name="TeamStaffID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FeaturesInMedia">
+          <End Role="Media" Type="Self.Medium" Multiplicity="*" />
+          <End Role="WorksForTeam" Type="Self.WorksForTeam" Multiplicity="*" />
+        </Association>
+        <Association Name="IsOnMedia">
+          <End Role="Media" Type="Self.Medium" Multiplicity="*" />
+          <End Role="AnalyticalCaster" Type="Self.AnalyticalCaster" Multiplicity="*" />
+        </Association>
+        <Association Name="ScheduledMatch">
+          <End Role="Schedule" Type="Self.Schedule" Multiplicity="*" />
+          <End Role="Match" Type="Self.Match" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="LECDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+          <EntitySet Name="AnalyticalCasters" EntityType="Self.AnalyticalCaster" />
+          <EntitySet Name="Casters" EntityType="Self.Caster" />
+          <EntitySet Name="Employees" EntityType="Self.Employee" />
+          <EntitySet Name="Hosts" EntityType="Self.Host" />
+          <EntitySet Name="Matches" EntityType="Self.Match" />
+          <EntitySet Name="MatchTickets" EntityType="Self.MatchTicket" />
+          <EntitySet Name="Media" EntityType="Self.Medium" />
+          <EntitySet Name="Schedules" EntityType="Self.Schedule" />
+          <EntitySet Name="Standings" EntityType="Self.Standing" />
+          <EntitySet Name="Teams" EntityType="Self.Team" />
+          <EntitySet Name="TeamStaffs" EntityType="Self.TeamStaff" />
+          <EntitySet Name="Tickets" EntityType="Self.Ticket" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="WorksForTeams" EntityType="Self.WorksForTeam" />
+          <AssociationSet Name="AnalyticalCaster_FK" Association="Self.AnalyticalCaster_FK">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="AnalyticalCaster" EntitySet="AnalyticalCasters" />
+          </AssociationSet>
+          <AssociationSet Name="Caster_FK" Association="Self.Caster_FK">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Caster" EntitySet="Casters" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK3" Association="Self.Match_FK3">
+            <End Role="Caster" EntitySet="Casters" />
+            <End Role="Match" EntitySet="Matches" />
+          </AssociationSet>
+          <AssociationSet Name="Host_FK" Association="Self.Host_FK">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="Host" EntitySet="Hosts" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK" Association="Self.Match_FK">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Match" EntitySet="Matches" />
+          </AssociationSet>
+          <AssociationSet Name="Match_FK2" Association="Self.Match_FK2">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Match" EntitySet="Matches" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK" Association="Self.MatchTicket_FK">
+            <End Role="Match" EntitySet="Matches" />
+            <End Role="MatchTicket" EntitySet="MatchTickets" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK2" Association="Self.MatchTicket_FK2">
+            <End Role="User" EntitySet="Users" />
+            <End Role="MatchTicket" EntitySet="MatchTickets" />
+          </AssociationSet>
+          <AssociationSet Name="MatchTicket_FK3" Association="Self.MatchTicket_FK3">
+            <End Role="Ticket" EntitySet="Tickets" />
+            <End Role="MatchTicket" EntitySet="MatchTickets" />
+          </AssociationSet>
+          <AssociationSet Name="Standing_FK" Association="Self.Standing_FK">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="Standing" EntitySet="Standings" />
+          </AssociationSet>
+          <AssociationSet Name="WorksForTeam_FK" Association="Self.WorksForTeam_FK">
+            <End Role="Team" EntitySet="Teams" />
+            <End Role="WorksForTeam" EntitySet="WorksForTeams" />
+          </AssociationSet>
+          <AssociationSet Name="WorksForTeam_FK2" Association="Self.WorksForTeam_FK2">
+            <End Role="TeamStaff" EntitySet="TeamStaffs" />
+            <End Role="WorksForTeam" EntitySet="WorksForTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FeaturesInMedia" Association="Self.FeaturesInMedia">
+            <End Role="Media" EntitySet="Media" />
+            <End Role="WorksForTeam" EntitySet="WorksForTeams" />
+          </AssociationSet>
+          <AssociationSet Name="IsOnMedia" Association="Self.IsOnMedia">
+            <End Role="Media" EntitySet="Media" />
+            <End Role="AnalyticalCaster" EntitySet="AnalyticalCasters" />
+          </AssociationSet>
+          <AssociationSet Name="ScheduledMatch" Association="Self.ScheduledMatch">
+            <End Role="Schedule" EntitySet="Schedules" />
+            <End Role="Match" EntitySet="Matches" />
+          </AssociationSet>
+          <FunctionImport Name="FreeSeatProcedure">
+            <Parameter Name="row" Mode="In" Type="Int32" />
+            <Parameter Name="seat" Mode="In" Type="Int32" />
+            <Parameter Name="matchName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateStandings">
+            <Parameter Name="teamID" Mode="In" Type="Int32" />
+            <Parameter Name="wins" Mode="In" Type="Int32" />
+            <Parameter Name="loses" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LECDBModelStoreContainer" CdmEntityContainer="LECDBEntities">
+          <EntitySetMapping Name="C__RefactorLog">
+            <EntityTypeMapping TypeName="LECDBModel.C__RefactorLog">
+              <MappingFragment StoreEntitySet="__RefactorLog">
+                <ScalarProperty Name="OperationKey" ColumnName="OperationKey" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AnalyticalCasters">
+            <EntityTypeMapping TypeName="LECDBModel.AnalyticalCaster">
+              <MappingFragment StoreEntitySet="AnalyticalCaster">
+                <ScalarProperty Name="ACasterID" ColumnName="ACasterID" />
+                <ScalarProperty Name="PredictionRate" ColumnName="PredictionRate" />
+                <ScalarProperty Name="Expertise" ColumnName="Expertise" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Casters">
+            <EntityTypeMapping TypeName="LECDBModel.Caster">
+              <MappingFragment StoreEntitySet="Caster">
+                <ScalarProperty Name="CasterID" ColumnName="CasterID" />
+                <ScalarProperty Name="CastingStyle" ColumnName="CastingStyle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="LECDBModel.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="InGameName" ColumnName="InGameName" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Hosts">
+            <EntityTypeMapping TypeName="LECDBModel.Host">
+              <MappingFragment StoreEntitySet="Host">
+                <ScalarProperty Name="HostID" ColumnName="HostID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Matches">
+            <EntityTypeMapping TypeName="LECDBModel.Match">
+              <MappingFragment StoreEntitySet="Match">
+                <ScalarProperty Name="MatchID" ColumnName="MatchID" />
+                <ScalarProperty Name="MatchName" ColumnName="MatchName" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="MatchFavorite" ColumnName="MatchFavorite" />
+                <ScalarProperty Name="TeamA_ID" ColumnName="TeamA_ID" />
+                <ScalarProperty Name="TeamB_ID" ColumnName="TeamB_ID" />
+                <ScalarProperty Name="Caster_ID" ColumnName="Caster_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MatchTickets">
+            <EntityTypeMapping TypeName="LECDBModel.MatchTicket">
+              <MappingFragment StoreEntitySet="MatchTicket">
+                <ScalarProperty Name="MatchID" ColumnName="MatchID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+                <ScalarProperty Name="MatchTicketID" ColumnName="MatchTicketID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Media">
+            <EntityTypeMapping TypeName="LECDBModel.Medium">
+              <MappingFragment StoreEntitySet="Media">
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="ShowName" ColumnName="ShowName" />
+                <ScalarProperty Name="Length" ColumnName="Length" />
+                <ScalarProperty Name="ReleaseDate" ColumnName="ReleaseDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Schedules">
+            <EntityTypeMapping TypeName="LECDBModel.Schedule">
+              <MappingFragment StoreEntitySet="Schedule">
+                <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="MatchOfTheDay" ColumnName="MatchOfTheDay" />
+                <ScalarProperty Name="MatchDescription" ColumnName="MatchDescription" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Standings">
+            <EntityTypeMapping TypeName="LECDBModel.Standing">
+              <MappingFragment StoreEntitySet="Standing">
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="Wins" ColumnName="Wins" />
+                <ScalarProperty Name="Loses" ColumnName="Loses" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Teams">
+            <EntityTypeMapping TypeName="LECDBModel.Team">
+              <MappingFragment StoreEntitySet="Team">
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+                <ScalarProperty Name="TeamName" ColumnName="TeamName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="HeadQuarters" ColumnName="HeadQuarters" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeamStaffs">
+            <EntityTypeMapping TypeName="LECDBModel.TeamStaff">
+              <MappingFragment StoreEntitySet="TeamStaff">
+                <ScalarProperty Name="TeamStaffID" ColumnName="TeamStaffID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="InGameName" ColumnName="InGameName" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tickets">
+            <EntityTypeMapping TypeName="LECDBModel.Ticket">
+              <MappingFragment StoreEntitySet="Ticket">
+                <ScalarProperty Name="TicketID" ColumnName="TicketID" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="Seat" ColumnName="Seat" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="MatchName" ColumnName="MatchName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="LECDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WorksForTeams">
+            <EntityTypeMapping TypeName="LECDBModel.WorksForTeam">
+              <MappingFragment StoreEntitySet="WorksForTeam">
+                <ScalarProperty Name="WorksForTeamID" ColumnName="WorksForTeamID" />
+                <ScalarProperty Name="TeamStaffID" ColumnName="TeamStaffID" />
+                <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="FeaturesInMedia" TypeName="LECDBModel.FeaturesInMedia" StoreEntitySet="FeaturesInMedia">
+            <EndProperty Name="Media">
+              <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+            </EndProperty>
+            <EndProperty Name="WorksForTeam">
+              <ScalarProperty Name="WorksForTeamID" ColumnName="WorksForTeamID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="IsOnMedia" TypeName="LECDBModel.IsOnMedia" StoreEntitySet="IsOnMedia">
+            <EndProperty Name="Media">
+              <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+            </EndProperty>
+            <EndProperty Name="AnalyticalCaster">
+              <ScalarProperty Name="ACasterID" ColumnName="ACasterID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="ScheduledMatch" TypeName="LECDBModel.ScheduledMatch" StoreEntitySet="ScheduledMatch">
+            <EndProperty Name="Schedule">
+              <ScalarProperty Name="ScheduleID" ColumnName="ScheduleID" />
+            </EndProperty>
+            <EndProperty Name="Match">
+              <ScalarProperty Name="MatchID" ColumnName="MatchID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="FreeSeatProcedure" FunctionName="LECDBModel.Store.FreeSeatProcedure" />
+          <FunctionImportMapping FunctionImportName="UpdateStandings" FunctionName="LECDBModel.Store.UpdateStandings" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

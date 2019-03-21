@@ -1,0 +1,104 @@
+﻿@model List<BP2Project.Models.Standing>
+
+<head>
+    <style>
+        body {
+            background: url(https://static1.squarespace.com/static/5a82f1550abd04d826494bc8/t/5c643f3beb393118997dec73/1550073661422/background-lol.png?format=2500w);
+            background-repeat: no-repeat;
+            background-size: 1980px, 720px;
+            width: 100%;
+            height: 100%;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            color: white;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index","Admin")"><img style="width:40px;height:40px; margin-top:-12px;" src="https://eu.lolesports.com/darkroom/original/b496f5eaa42b6152b579a5c3e6edf5a3:b9ea0fa9ce55cde10d1eef7564ba4c3a/en-logo.png" /></a>
+
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="@Url.Action("ChangeStandings", "Admin")">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        ChangeStandings
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Schedule", "Admin")">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        Schedule
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Standings", "Admin")">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Standings
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Media", "Admin")">
+                        <span class="glyphicon glyphicon-globe"></span>
+                        Media
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Tickets", "Admin")">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        Tickets
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("UserProfile", "Admin")">
+                        <span class="glyphicon glyphicon-user"></span>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Logout", "Admin")">
+                        <span class="glyphicon glyphicon-log-out"></span>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <table>
+        <tr>
+            <th>Rank</th>
+            <th>Team</th>
+            <th>Wins</th>
+            <th>Loses</th>
+        </tr>
+        @foreach (var standing in Model)
+        {
+            <tr>
+                <td>@standing.Rank</td>
+                <td>@standing.Team.TeamName</td>
+                <td>@standing.Wins</td>
+                <td>@standing.Loses</td>
+            </tr>
+        }
+    </table>
+</body>

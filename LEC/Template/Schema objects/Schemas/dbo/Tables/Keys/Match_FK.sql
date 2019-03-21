@@ -1,0 +1,4 @@
+﻿ALTER TABLE [dbo].[Match]
+	ADD CONSTRAINT [Match_FK]
+	FOREIGN KEY (TeamA_ID)
+	REFERENCES [Team] (TeamID)

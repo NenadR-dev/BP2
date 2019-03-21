@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5FEC4E10-B804-0B78-9FA4-E38CFFA8FF80" name="Match">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 10:21:29 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="StartTime" id="648B2FA7-2FA6-0F6E-4257-0CE303221DA9">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 10:21:38 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MatchName" id="CBC6C823-8C46-1C85-630F-79FE15B39568">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:39:28 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MatchID" id="4D3DAB46-62F8-83CB-31D3-52AA61238918">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-15 10:02:12 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MatchFavorite" id="40CD2A6C-3661-FAC4-1521-5658D2CEFB3B">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-16 14:46:15 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TeamID" id="CCF9F523-8483-884D-5533-70637CE0022E">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:00 UTC</createdTime>
+<generatorID>BC7FB0D4-5E8F-D842-59ED-2C5B1938A24D</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<referedAttribute>14721FD6-6B6B-C7E2-D885-DB3152E8B6B2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TeamID1" id="C9D5BA49-82F5-AD36-6A3C-DA6DB7EE2EAF">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:00 UTC</createdTime>
+<generatorID>F6254609-C9CF-69FD-52DB-90E1D8862434</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<referedAttribute>14721FD6-6B6B-C7E2-D885-DB3152E8B6B2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B88A0000-1E5B-829B-6CA2-551E036C1A11" name="Match PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:30:44 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4D3DAB46-62F8-83CB-31D3-52AA61238918</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

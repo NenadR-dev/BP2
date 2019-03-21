@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Media]
+	ADD CONSTRAINT [Media_PK]
+	PRIMARY KEY (MediaID)

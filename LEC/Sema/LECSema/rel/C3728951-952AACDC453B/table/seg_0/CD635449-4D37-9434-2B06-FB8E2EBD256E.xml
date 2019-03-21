@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CD635449-4D37-9434-2B06-FB8E2EBD256E" name="FeaturesInMedia">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="WorksForTeam_WorksForTeam_ID" id="334597AA-3089-04E5-EDBE-185F18D5F7FC">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5AD8DC7E-F05A-EF1A-3866-3519B996934A" referredColumn="D25A2BAD-A11B-FB75-34FE-7E25997D9037"/>
+</associations>
+</Column>
+<Column name="Media_MediaID" id="BA4ED1D4-5C41-E046-D374-3FD85B7B3F7F">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="43312F89-FE3B-3CBE-2D42-5B0A78A7060F" referredColumn="E7DF9121-C515-6409-986D-2578E6AE21B2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="423B09B0-FA0E-A659-A7BC-E4A78418FF58" name="FeaturesInMedia_PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="334597AA-3089-04E5-EDBE-185F18D5F7FC"/>
+<colUsage columnID="BA4ED1D4-5C41-E046-D374-3FD85B7B3F7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="56CDBB4D-237A-09F7-A405-88251AB1269D" name="FeaturesInMedia_WorksForTeam_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>98C7CB5F-A0DD-7890-B8F9-0456D00C49E5</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="334597AA-3089-04E5-EDBE-185F18D5F7FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="575B8FDF-EAAD-26A2-EBEF-3933180336D9" name="FeaturesInMedia_Media_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>98C7CB5F-A0DD-7890-B8F9-0456D00C49E5</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BA4ED1D4-5C41-E046-D374-3FD85B7B3F7F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Team2" directorySegmentName="seg_0" id="F6254609-C9CF-69FD-52DB-90E1D8862434">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 12:09:16 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<sourcePk>509D5A2C-C2AD-EA14-2C8A-BDABDBDAE137</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C70F19F5-8787-DC73-0334-AF5CA2282A62</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5FEC4E10-B804-0B78-9FA4-E38CFFA8FF80</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

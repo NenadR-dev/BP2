@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5561C666-B20B-85F6-F595-E446D8988B1D" name="Caster">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>6388F4DF-13D5-34BC-C6FB-D57BFEB3CB06</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CastingStyle" id="B1E0B360-6E08-3365-1B13-F8C1E0B6C930">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>5C73C3B0-C993-6438-DDC9-CBD3547F33E7</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EmployeeID" id="5FCFABC6-B0CC-726E-6F51-C829F621339D">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>39429BC2-8C35-95FB-7BBD-520507547B96</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2BEF7253-C868-2347-EA30-423ACAC65153" referredColumn="CA7EBBF1-446D-B7D2-D492-32A1A7302D38"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="755071E0-37C1-4036-F2C8-B98A066C9948" name="Caster_PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>F88B11A8-D404-E528-C3B0-1D8DCC3658DA</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FCFABC6-B0CC-726E-6F51-C829F621339D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9E1E8DA8-8C50-F459-BB36-BC8DB9B13728" name="Caster_Employee_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>2A354026-43DF-91A3-57E6-44A99E7EEB2E</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FCFABC6-B0CC-726E-6F51-C829F621339D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8EE998D4-512B-EB71-2301-8EDCAF49A06D" name="ScheduledMatch">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Schedule_ScheduleID" id="2B3A5A26-0648-583A-75D9-F1CD56991460">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C3DB70BC-3199-12D2-AA76-42DE816EBC04" referredColumn="4D44CB7C-AD97-82BF-3A64-7C57843C26A4"/>
+</associations>
+</Column>
+<Column name="Match_MatchID" id="8F617500-EFDA-3C2C-7A76-A273DEEE04EA">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="94262EE6-AB1B-F351-E9DA-FBEC79F4D69B" referredColumn="CCA29957-5A75-960C-AB99-A9B6BE16810C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6DA6F51D-BB1E-C9E5-46FB-A8CFE92D9AC1" name="ScheduledMatch_PK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B3A5A26-0648-583A-75D9-F1CD56991460"/>
+<colUsage columnID="8F617500-EFDA-3C2C-7A76-A273DEEE04EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="066C3134-FA53-1E89-77B7-B35BBDB3AA4F" name="ScheduledMatch_Schedule_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>D3E4DB8F-E0E7-F4B8-4DC6-EBCADC6A578D</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B3A5A26-0648-583A-75D9-F1CD56991460"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B07C26C3-5391-0893-7BFD-070EA8B967B6" name="ScheduledMatch_Match_FK">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<generatorID>D3E4DB8F-E0E7-F4B8-4DC6-EBCADC6A578D</generatorID>
+<ownerDesignName>LECSema</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F617500-EFDA-3C2C-7A76-A273DEEE04EA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

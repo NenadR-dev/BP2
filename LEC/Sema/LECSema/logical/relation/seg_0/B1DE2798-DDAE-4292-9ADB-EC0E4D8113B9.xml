@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BuysMany" directorySegmentName="seg_0" id="B1DE2798-DDAE-4292-9ADB-EC0E4D8113B9">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-09 11:35:53 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<engineerTo>
+<item key="C3728951-18AD-7857-3A10-952AACDC453B" value="true"/>
+</engineerTo>
+<sourcePk>DA91151A-09A1-E2D3-852C-67E899C1FEEC</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B039C737-4402-4CA2-CFDE-DE912D0B3A85</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1D544865-FC2E-83AE-F52D-BFCBA72E8C01</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

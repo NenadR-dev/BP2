@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKArc class="oracle.dbtools.crest.model.design.relational.FKArc" directorySegmentName="seg_0" id="1E1AD255-3D4E-CECF-19BA-6AAF7B1AC189" name="FKArc_1">
+<createdBy>Nenad</createdBy>
+<createdTime>2019-03-17 15:31:34 UTC</createdTime>
+<ownerDesignName>LECSema</ownerDesignName>
+<mandatory>false</mandatory>
+<reverseArc>true</reverseArc>
+<table>F42970AF-EDF2-4F23-9B36-E628AE5E123D</table>
+<fkeys>
+<fkeyID>2BEF7253-C868-2347-EA30-423ACAC65153</fkeyID>
+<fkeyID>77261FC5-DE05-A136-F90A-A5C5558CBAB9</fkeyID>
+<fkeyID>B9E98FB2-7B27-EE2D-EF94-70DFB17F12DD</fkeyID>
+</fkeys>
+</FKArc>

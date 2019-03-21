@@ -1,0 +1,3 @@
+﻿ALTER TABLE [dbo].[Host]
+	ADD CONSTRAINT [Host_PK]
+	PRIMARY KEY (HostID)

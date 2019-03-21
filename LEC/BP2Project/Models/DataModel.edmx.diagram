@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47c95299011d44d48d7713be8947506d" Name="Diagram1">
+        <EntityTypeShape EntityType="LECDBModel.C__RefactorLog" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.AnalyticalCaster" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Caster" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Employee" Width="1.5" PointX="1.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Host" Width="1.5" PointX="3.75" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Match" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.MatchTicket" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Medium" Width="1.5" PointX="3.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Schedule" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Standing" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Team" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.TeamStaff" Width="1.5" PointX="3.75" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.Ticket" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.User" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="LECDBModel.WorksForTeam" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="LECDBModel.AnalyticalCaster_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Caster_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Match_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Host_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Match_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Match_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.MatchTicket_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.MatchTicket_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.MatchTicket_FK3" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.Standing_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.WorksForTeam_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.WorksForTeam_FK2" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.FeaturesInMedia" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.IsOnMedia" ManuallyRouted="false" />
+        <AssociationConnector Association="LECDBModel.ScheduledMatch" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
