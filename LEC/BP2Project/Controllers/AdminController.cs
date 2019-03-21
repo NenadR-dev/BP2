@@ -215,8 +215,9 @@ namespace BP2Project.Controllers
                 try
                 {
                     Team t = DataAccess.DbAccess.Standings.ToList().Find(x => x.Team.TeamName == team).Team;
-                    t.Standing.Wins = wins;
-                    t.Standing.Loses = loses;
+                    //t.Standing.Wins = wins;
+                    //t.Standing.Loses = loses;
+                    DataAccess.DbAccess.UpdateStandings(t.TeamID, wins, loses);
                     DataAccess.DbAccess.SaveChanges();
                     DataAccess.RefreshDB();
                     return RedirectToAction("Standings", "Admin");
