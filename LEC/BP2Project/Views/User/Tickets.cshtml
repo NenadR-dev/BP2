@@ -92,8 +92,8 @@
                         new SelectList(Model.matches),
                         "Select Match",
                         new { @class = "form-control" })
-            <input type="number" name="row" placeholder="Row" required="required" />
-            <input type="number" name="seat" placeholder="Seat" required="required" />
+            <input type="number" name="row" placeholder="Row" required="required" min="0" max="20"/>
+            <input type="number" name="seat" placeholder="Seat" required="required" min="0" max="100"/>
             <div class="col-md-10">
                 <label>Price:</label>
                 <input type="number" name="Price" placeholder="Price" value="45" readonly="readonly" style="width:150px;" />

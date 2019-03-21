@@ -216,8 +216,8 @@
                         new SelectList(Model.teams),
                         "Select Match",
                         new { @class = "form-control" })
-            <input type="number" name="wins" placeholder="Wins" required="required" />
-            <input type="number" name="loses" placeholder="Loses" required="required" />
+            <input type="number" name="wins" placeholder="Wins" required="required" min="0" max="20" />
+            <input type="number" name="loses" placeholder="Loses" required="required" min="0" max="20"/>
             <button type="submit" class="btn btn-primary btn-block btn-large">Change</button>
         </form>
         <label style="color:white; font-size:16px;">
